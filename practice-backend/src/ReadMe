@@ -1,0 +1,13 @@
+# dir path
+- C:\dev
+    - apache-zookeeper-3.8.0-bin
+    - kafka_2.13-3.4.0
+
+# Start ZooKeeper
+bin\zkServer.cmd
+
+# Start Kafka
+bin\windows\kafka-server-start.bat config\server.properties
+
+# Topic List
+- dev-topic
