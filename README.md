@@ -11,5 +11,5 @@ practice for reactive web (WebFlux / Kafka / GraphQL / JPA)
   - mongo 
   - Maria 
 
-- Other
+- Others
   - Kafka
