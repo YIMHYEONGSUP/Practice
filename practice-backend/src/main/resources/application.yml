@@ -1,0 +1,39 @@
+spring:
+  server:
+    port: 8080 # ?? ?? ??
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/practice # MongoDB URI
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/practice
+    username: root # username
+    password: 0505 # password
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl.auto: update
+    open-in-view: false
+    show-sql: true
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: foo
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+graphql:
+  servlet:
+    mapping: /graphql # GraphQL API ????? ??
+
